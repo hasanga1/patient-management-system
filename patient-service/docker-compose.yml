@@ -11,7 +11,7 @@ services:
     ports:
       - "5400:5432"
     volumes:
-      - /Users/hasangaranasinghe/Documents/db-volume/patient-service-db:/var/lib/postgresql/data
+      - /Users/hasangaranasinghe/Documents/db-volume/patient-service-db:/var/lib/postgresql
     networks:
       - internal
 

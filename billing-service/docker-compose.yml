@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  billing-service:
+    build: ./   # build from Dockerfile in this folder
+    container_name: billing-service
+    ports:
+      - "4001:4001"
+      - "9001:9001"
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
