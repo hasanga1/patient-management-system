@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  api-gateway:
+    build: ./ # build from Dockerfile in this folder
+    container_name: api-gateway
+    ports:
+      - "4004:4004"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    external: true
