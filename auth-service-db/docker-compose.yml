@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  auth-service-db:
+    image: postgres:latest
+    container_name: auth-service-db
+    environment:
+      POSTGRES_USER: admin_user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: db
+    ports:
+      - "5001:5432"
+    volumes:
+      - /Users/hasangaranasinghe/Documents/db-volume/auth-service-db:/var/lib/postgresql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    external: true
