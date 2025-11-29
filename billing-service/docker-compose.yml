@@ -8,8 +8,8 @@ services:
       - "4001:4001"
       - "9001:9001"
     networks:
-      - internal
+      - app-network
 
 networks:
-  internal:
-    driver: bridge
+  app-network:
+    external: true
