@@ -15,8 +15,8 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,EXTERNAL:PLAINTEXT,PLAINTEXT:PLAINTEXT
       CLUSTER_ID: "5L6g3nShT-eMCtK--X86sw"
     networks:
-      - internal
+      - app-network
 
 networks:
-  internal:
-    driver: bridge
+  app-network:
+    external: true
