@@ -1,4 +1,4 @@
-package com.patient.authservice.dto;
+package com.patient.auth_service.dto;
 
 public class LoginResponseDTO {
   private final String token;
